@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Sri Madhan" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="asserts/favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="asserts/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="asserts/favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="asserts/favicon_io/site.webmanifest">
+	<title>Sri Madhan</title>
+</head>
+
+<body>
+
+	<div class="loading" id="js-loader">
+		<div class="loader"></div>
+	</div>
+
+	<div class="wrapper">
+		<canvas id="c"></canvas>
+	</div>
+
+	<div class="frame">
+		<h1 class="frame__title">Sri Madhan</h1>
+		<div class="frame__links">
+			<div class="rcorners1">
+				<h3>I'll be back soon</h3>
+
+				<h5>A little patience...</h5>
+
+				<p>For now, this website is under construction.
+					I'm doing my best to present the new Website version very soon.
+					You can leave your name and email to be among the first person to
+					be notified about the release
+				</p>
+
+				<p><b>Try out some of the upcoming release's new features, such as clicking the 3D character on the
+						shirt to perform various
+						actions and moving the mouse cursor over the window to move the character's neck in desktop
+						mode.</b></p>
+				<form onsubmit="saveFile()">
+					<input type="text" placeholder="Name*" id="name" required />
+					<br><br>
+					<input type="email" placeholder="Email*" id="email" required />
+					<br>
+					<p align="right">
+						<button class="form-submit-button">Notify Me</button>
+					</p>
+				</form>
+			</div>
+			<!-- <a href="#">About</a>
+			<a href="/tieup">Projects</a> -->
+		</div>
+	</div>
+
+
+	<div class="frameBottom center-con">
+		<div class="round">
+			<div class="speaker">
+				<button id="mute" value="mute" class="mute"></button>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+	<script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+	<script src="js/script.js"></script>
+
+	<script>
+		let saveFile = () => {
+
+			const name = document.getElementById('name');
+			const email = document.getElementById('email');
+
+			let data =
+				'\r Name: ' + name.value + ' \r\n ' +
+				'Email: ' + email.value + ' \r\n----------- ';
+
+			if (confirm('Thank you ' + name.value + ' !')) {
+				yourformelement.submit();
+			} else {
+				return false;
+			}
+
+		}
+	</script>
+
+</body>
+
+</html>
